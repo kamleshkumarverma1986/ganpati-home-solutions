@@ -1,0 +1,57 @@
+
+body {
+    transition: background 1s; // for theme
+}
+
+
+/* Hide Arrows From Input Number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* All Button in square shape except circular button */
+.MuiButtonBase-root:not(.MuiFab-circular) {
+    border-radius: 0 !important;
+}
+  
+  /* All Paper should be border-radius - 0 */
+.MuiPaper-root {
+    border-radius: 0 !important;
+}
+
+// Image Upload Related CSS
+.media-edit-container {
+    position: relative;
+    .main-content {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+    .upload-button-section {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &:hover .main-content {
+        opacity: 0.3;
+    }
+    &:hover .upload-button-section {
+        opacity: 1;
+    }
+}
